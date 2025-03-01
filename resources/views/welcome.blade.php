@@ -27,13 +27,13 @@
 <body class="bg-gray-100 h-screen">
 <nav class="bg-white shadow-md py-4">
     <div class="container mx-auto px-4 flex justify-between items-center">
-        <a href="#" class="text-lg font-bold">Магазин</a>
+        <a href="#" class="text-lg font-bold">MPFIT</a>
         <ul class="flex items-center space-x-4">
             <li>
                 <a href="{{ route('products.index')  }}" class="text-gray-600 hover:text-gray-900 transition duration-300">Товары</a>
             </li>
             <li>
-                <a href="#" class="text-gray-600 hover:text-gray-900 transition duration-300">Заказы</a>
+                <a href="{{ route('orders.index')  }}" class="text-gray-600 hover:text-gray-900 transition duration-300">Заказы</a>
             </li>
         </ul>
     </div>
