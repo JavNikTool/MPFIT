@@ -30,7 +30,7 @@
         <a href="#" class="text-lg font-bold">Магазин</a>
         <ul class="flex items-center space-x-4">
             <li>
-                <a href="{{ view('products.index')  }}" class="text-gray-600 hover:text-gray-900 transition duration-300">Товары</a>
+                <a href="{{ route('products.index')  }}" class="text-gray-600 hover:text-gray-900 transition duration-300">Товары</a>
             </li>
             <li>
                 <a href="#" class="text-gray-600 hover:text-gray-900 transition duration-300">Заказы</a>
