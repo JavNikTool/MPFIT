@@ -1,3 +1,4 @@
+@php use App\Enums\Order\Status; @endphp
 @extends('welcome')
 
 @section('content')
@@ -18,7 +19,7 @@
         <label for="status" class="block text-gray-700 text-sm font-bold mb-2">Статус:</label>
         <p id="status" class="text-gray-700 text-sm">{{ $order->status }}</p>
     </div>
-    @if ($order->status !== 'выполнен')
+    @if ($order->status !==  Status::CANCELLED->value)
         <form action="{{ route('orders.update', [$order]) }}" method="post">
             @csrf
             @method('PUT')
