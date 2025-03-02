@@ -9,5 +9,5 @@ interface BaseRepository
 {
     public function getBaseQuery(): Builder;
 
-    public function paginate(Builder $query ,int $perPage): LengthAwarePaginator;
+    public function paginate(Builder $query, int $perPage): LengthAwarePaginator;
 }

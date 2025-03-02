@@ -17,8 +17,6 @@ class ProductService extends BaseService
     {
         $query = $this->repository->getBaseQuery();
         $query = $query->orderByDesc('id');
-        $products_with_paginate = $this->repository->paginate($query, $perPage);
-
-        return $products_with_paginate;
+        return $this->repository->paginate($query, $perPage);
     }
 }

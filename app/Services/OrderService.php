@@ -18,8 +18,6 @@ class OrderService extends BaseService
     {
         $query = $this->repository->getBaseQuery();
         $query = $query->orderByDesc('id');
-        $orders_with_paginate = $this->repository->paginate($query, $perPage);
-
-        return $orders_with_paginate;
+        return $this->repository->paginate($query, $perPage);
     }
 }
