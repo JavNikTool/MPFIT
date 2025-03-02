@@ -29,7 +29,7 @@ class StoreRequest extends FormRequest
         ];
     }
 
-    public function messages()
+    public function messages(): array
     {
         return [
             'client_id.required' => 'Поле "Клиент" обязательно для заполнения.',

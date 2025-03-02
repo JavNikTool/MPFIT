@@ -14,7 +14,7 @@ class ProductRepository implements BaseRepository
         return Product::query();
     }
 
-    public function paginate($query, $perPage): LengthAwarePaginator
+    public function paginate(Builder $query, int $perPage): LengthAwarePaginator
     {
         return $query->paginate($perPage);
     }

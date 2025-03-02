@@ -15,7 +15,7 @@ class OrderRepository implements BaseRepository
         return Order::query();
     }
 
-    public function paginate($query, $perPage): LengthAwarePaginator
+    public function paginate( Builder $query, int $perPage): LengthAwarePaginator
     {
         return $query->paginate($perPage);
     }
