@@ -8,9 +8,9 @@ use Illuminate\Pagination\LengthAwarePaginator;
 
 class ProductService extends BaseService
 {
-    public function __construct(private ProductRepository $productRepository)
+    public function __construct(private readonly ProductRepository $productRepository)
     {
-        $this->repository = $productRepository;
+        $this->repository = $this->productRepository;
     }
 
     public function getAllProductsWithPaginate(int $perPage): LengthAwarePaginator

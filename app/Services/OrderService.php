@@ -9,7 +9,7 @@ use Illuminate\Pagination\LengthAwarePaginator;
 
 class OrderService extends BaseService
 {
-    public function __construct(private OrderRepository $orderRepository)
+    public function __construct(private readonly OrderRepository $orderRepository)
     {
         $this->repository = $this->orderRepository;
     }
